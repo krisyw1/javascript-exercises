@@ -1,14 +1,16 @@
 const removeFromArray = function(passedArray, trashValue) {
-let i = passedArray.length; 
+
+let rtnArray;
 //array(loop) = remove then remove
-for(;i == 0; i--){
-    if(passedArray[i]) === trashValue){
-        passedArray.splice(0,i);
+for(let i = 0 ;i < passedArray.length ; i++){
+    if(passedArray[i] == trashValue){
+        passedArray.splice(i,1);
     }
 }
 //end loop
 //return
 return passedArray;
+
 }
 
 module.exports = removeFromArray
