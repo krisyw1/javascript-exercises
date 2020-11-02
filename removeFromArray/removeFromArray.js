@@ -1,19 +1,15 @@
-const removeFromArray = function(passedArray, ...trashValue) {
-
-    //is rest array longer than 1 value
-    //if no call remove
-    //if yes loop length of trashValue
-        //call remove
-    //end
+const removeFromArray = function (passedArray, ...trashValue) {
 
 
-for(let i = 0 ;i < passedArray.length ; i++){
-    if(passedArray[i] == trashValue){
-        passedArray.splice(i,1);
+    for (let x = 0; x < trashValue.length; x++) {
+        for (let i = 0; i < passedArray.length; i++) {
+            if (passedArray[i] === trashValue[x]) {
+                passedArray.splice(i, 1);
+            }
+        }
     }
-}
 
-return passedArray;
+    return passedArray;
 
 }
 
