@@ -15,7 +15,7 @@ let sumSum = 0;
         return "ERROR";
     }
 //loop for sum
-    for(i=minValue; i=maxValue; i++){
+    for(i = minValue; i == maxValue; i++){
         sumSum = sumSum + i;
     }   
     
