@@ -15,11 +15,12 @@ let sumSum = 0;
         return "ERROR";
     }
 //loop for sum
-    for(i = minValue; i == maxValue; i++){
+    for(let i = minValue; i == maxValue; i++){
         sumSum = sumSum + i;
     }   
     
 //return
+    console.log(sumSum)
     return sumSum;
 }
 
