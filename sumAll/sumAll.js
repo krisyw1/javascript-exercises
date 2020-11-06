@@ -1,13 +1,13 @@
 const sumAll = function(x,y) {
 let maxValue;
 let minValue;
-let sumSum = 0;
+let sumSum;
 //check input and set min and max
-    if(Number.isInteger(x) && Number.isInteger(y) && x >= 0 && y >= 0){
+    if(Number.isInteger(+x) && Number.isInteger(+y) && (+x) > 0 && (+y) > 0){
         if(x > y){
             maxValue = x;
             minValue = y;
-        } else{
+        } else if(y>x){
             maxValue = y;
             minValue = x;
         }
@@ -16,6 +16,7 @@ let sumSum = 0;
     }
 //loop for sum
     for(let i = minValue; i == maxValue; i++){
+        console.log(i)
         sumSum = sumSum + i;
     }   
     
