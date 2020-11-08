@@ -5,7 +5,9 @@ const ftoc = function(far) {
 }
 
 const ctof = function(celc) {
-
+  let far = (celc*(9/5))+32;
+  far = Math.round(far *10) /10;
+  return far;
 }
 
 module.exports = {
