@@ -1,28 +1,21 @@
-const sumAll = function(x,y) {
-let maxValue;
-let minValue;
-let sumSum;
+const sumAll = function(min,max) {
 //check input and set min and max
-    if(Number.isInteger(+x) && Number.isInteger(+y) && (+x) > 0 && (+y) > 0){
-        if(x > y){
-            maxValue = x;
-            minValue = y;
-        } else if(y>x){
-            maxValue = y;
-            minValue = x;
-        }
-    } else{
-        return "ERROR";
+    if(!Number.isInteger(min) || !Number.isInteger(max)) return "ERROR";
+    if(min < 0 || max < 0) return "ERROR";
+    if(max < min){
+        let minMax = min;
+        min = max;
+        max = minMax;
     }
-//loop for sum
-    for(let i = minValue; i == maxValue; i++){
-        console.log(i)
-        sumSum = sumSum + i;
-    }   
-    
-//return
-    console.log(sumSum)
-    return sumSum;
-}
+//loop to add sum
+    let sum = 0;
+    for(let i = min; i < max + 1; i++){
+        sum += i;
+    }
+
+    return sum;
+};
 
 module.exports = sumAll
+
+
